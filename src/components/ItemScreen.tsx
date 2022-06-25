@@ -1,11 +1,14 @@
-import React from 'react'
+import { Grid } from "@mui/material";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const ItemScreen = (props: Props) => {
   return (
-    <div>ItemScreen</div>
-  )
-}
+    <Grid item lg={9} textAlign="center">
+      <div>ItemScreen</div>
+    </Grid>
+  );
+};
 
-export default ItemScreen
+export default ItemScreen;
