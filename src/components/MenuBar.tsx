@@ -105,33 +105,48 @@ const MenuBar = (props: Props) => {
       <Card
         sx={{
           backgroundColor: "#f0efe0",
-          height: "24px",
+          height: "26px",
           border: "2px solid #fffbef",
           borderRadius: "0px",
         }}
       >
         <Stack direction="row" spacing={2} justifyContent="space-between">
-          <Typography>Address</Typography>
+          <Typography color="GrayText">Address</Typography>
           <Stack
             sx={{
-              width: "100%",
+              width: "90%",
               backgroundColor: "white",
               border: "2px solid #fffbef",
+              m: 0,
             }}
           >
             <Typography>
               C:\Documents and Settings\111\Local Settings\Temp
             </Typography>
-            <Icon icon="ri:arrow-drop-down-line" style={{backgroundColor:'blue'}}/>
           </Stack>
-          <Card>
+          <Icon
+            icon="ri:arrow-drop-down-line"
+            style={{
+              height: "24px",
+              width: "24px",
+              margin: 0,
+              backgroundColor: "lightblue",
+              color: "darkblue",
+            }}
+          />
+          <Stack
+            sx={{ ml: "0 !important" }}
+            direction="row"
+            justifyContent="space-between"
+          >
             <Image
               src="/XP/24x24/actions/go-next-symbolic.png"
               alt="/XP/24x24/actions/go-next-symbolic.png"
               width="24px"
               height="24px"
             />
-          </Card>
+            <Typography>Go</Typography>
+          </Stack>
         </Stack>
       </Card>
     </Stack>

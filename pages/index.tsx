@@ -1,5 +1,6 @@
 import { Button, Typography } from "@mui/material";
 import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
+import MainScreen from "../src/components/MainScreen";
 import MenuBar from "../src/components/MenuBar";
 import Navbar from "../src/components/Navbar";
 const Home: React.FC = () => {
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
     <>
       <Navbar />
       <MenuBar />
+      <MainScreen />
       <Typography variant="h5">NFTPortfolio</Typography>
       {address && (
         <Button variant="outlined" onClick={disconnectWallet}>
