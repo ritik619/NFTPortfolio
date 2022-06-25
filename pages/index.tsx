@@ -1,21 +1,30 @@
-import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react';
-import type { NextPage } from 'next';
-
-const Home: NextPage = () => {
+import { Button, Typography } from "@mui/material";
+import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
+import MainScreen from "../src/components/MainScreen";
+import MenuBar from "../src/components/MenuBar";
+import Navbar from "../src/components/Navbar";
+const Home: React.FC = () => {
   const address = useAddress();
   const connectWithMetamask = useMetamask();
   const disconnectWallet = useDisconnect();
+
   return (
-    <div>
-      {address ? (
-        <>
-          <button onClick={disconnectWallet}>Disconnect Wallet</button>
-          <p>Your address: {address}</p>
-        </>
-      ) : (
-        <button onClick={connectWithMetamask}>Connect with Metamask</button>
+    <>
+      <Navbar />
+      <MenuBar />
+      <MainScreen />
+      <Typography variant="h5">NFTPortfolio</Typography>
+      {address && (
+        <Button variant="outlined" onClick={disconnectWallet}>
+          Disconnect
+        </Button>
       )}
-    </div>
+      {!address && (
+        <Button variant="outlined" onClick={connectWithMetamask}>
+          Connect
+        </Button>
+      )}
+    </>
   );
 };
 
