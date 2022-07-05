@@ -1,3 +1,5 @@
+import "xp.css/dist/XP.css";
+
 import { Button, Typography } from "@mui/material";
 import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
 import MainScreen from "../src/components/MainScreen";
